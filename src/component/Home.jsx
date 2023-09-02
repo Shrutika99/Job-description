@@ -13,7 +13,7 @@ function Home() {
           `https://hacker-news.firebaseio.com/v0/jobstories.json`
         );
 
-        const jobIds = response.data.slice((page - 1) * 3, page * 3);
+        const jobIds = response.data.slice((page - 1) * 6, page * 6);
 
         const jobPromises = jobIds.map(async (jobId) => {
           const jobResponse = await axios.get(
